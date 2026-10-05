@@ -1,0 +1,196 @@
+.footer {
+  background: #111c17;
+  padding: 70px 60px 40px;
+  border-top: 1px solid rgba(197, 168, 128, 0.1);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #f5efe6;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.footer-brand-tagline {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(245, 239, 230, 0.4);
+  max-width: 270px;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(197, 168, 128, 0.55);
+  text-decoration: none;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.footer-social-link:hover {
+  border-color: #c5a880;
+  color: #c5a880;
+}
+
+.footer-social-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.footer-col-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c5a880;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col-links li a {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(245, 239, 230, 0.45);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col-links li a:hover {
+  color: #f5efe6;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid rgba(197, 168, 128, 0.1);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(245, 239, 230, 0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(245, 239, 230, 0.3);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+  color: rgba(245, 239, 230, 0.65);
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* Mobile: 2-column layout instead of one long stacked column */
+@media (max-width: 600px) {
+  .footer {
+    padding: 56px 24px 32px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  /* Brand block spans both columns, stays full width up top */
+  .footer-top > div:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand-tagline {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Explore + Services sit side by side */
+  .footer-top > div:nth-child(2),
+  .footer-top > div:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  /* Contact spans full width below (longer lines: email, address) */
+  .footer-top > div:nth-child(4) {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(197, 168, 128, 0.1);
+    padding-top: 28px;
+  }
+
+  .footer-col-title {
+    margin-bottom: 14px;
+  }
+
+  .footer-col-links {
+    gap: 10px;
+  }
+
+  .footer-col-links li a {
+    font-size: 12.5px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

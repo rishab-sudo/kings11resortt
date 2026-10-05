@@ -1,0 +1,286 @@
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+
+.gallery-banner-section {
+  width: 100%;
+  background-color: #14120e;
+  border-bottom: 1px solid rgba(201, 168, 106, 0.15);
+}
+
+.gallery-banner {
+  position: relative;
+  width: 100%;
+  min-height: 68vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gallery-banner-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.gallery-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 15, 20, 0.2) 0%,
+    rgba(11, 15, 20, 0.5) 50%,
+    rgba(11, 15, 20, 0.95) 100%
+  );
+}
+
+.gallery-banner-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 780px;
+  padding: 0 6vw 5vw;
+}
+
+.gallery-banner-eyebrow {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #c9a86a;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+.gallery-banner-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  margin: 0 0 1.2rem;
+  color: #fbf8f2;
+}
+
+.gallery-banner-lede {
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: rgba(246, 241, 231, 0.88);
+  margin: 0;
+  max-width: 54ch;
+}
+
+/* ==========================================================================
+   Section Header
+   ========================================================================== */
+
+.gallery-section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 6vh 6vw 4vh;
+}
+
+.gallery-section-eyebrow {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #c9a86a;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-section-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  color: #ffffff;
+  margin: 0 0 1rem;
+}
+
+.gallery-section-lede {
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Container fluid + container
+   ========================================================================== */
+
+.gallery-container-fluid {
+  width: 100%;
+  padding: 0 6vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Image + Description Rows
+   ========================================================================== */
+
+.gallery-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 100%;
+  padding: 4vh 0 8vh;
+  box-sizing: border-box;
+}
+
+.gallery-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+.gallery-row--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Media = 65% */
+.gallery-row-media {
+  flex: 0 0 65%;
+  width: 65%;
+  max-width: 65%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.45);
+  will-change: transform, opacity, filter;
+  box-sizing: border-box;
+}
+
+.gallery-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-row-media:hover .gallery-media {
+  transform: scale(1.06);
+}
+
+/* Text = 35% */
+.gallery-row-text {
+  flex: 0 0 35%;
+  width: 35%;
+  max-width: 35%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.gallery-row-index {
+  display: block;
+  font-family: "Jost", "Inter", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: #c9a86a;
+  margin-bottom: 0.6rem;
+}
+
+.gallery-row-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  color: #ffffff;
+  margin: 0 0 0.9rem;
+}
+
+.gallery-row-desc {
+  font-family: "Jost", "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  max-width: 46ch;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .gallery-row-media,
+  .gallery-row-text {
+    flex-basis: auto;
+  }
+
+  .gallery-row-media {
+    flex: 0 0 60%;
+    width: 60%;
+    max-width: 60%;
+  }
+
+  .gallery-row-text {
+    flex: 0 0 40%;
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-banner {
+    min-height: 56vh;
+  }
+
+  .gallery-banner-content {
+    padding: 0 6vw 7vw;
+  }
+
+  .gallery-container-fluid {
+    padding: 0 6vw;
+  }
+
+  .gallery-rows {
+    gap: 4vh;
+    padding: 3vh 0 5vh;
+  }
+
+  /* Text on top, media below — both full width */
+  .gallery-row,
+  .gallery-row--reverse {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .gallery-row-media,
+  .gallery-row-text {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-row-media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-row-desc {
+    max-width: 100%;
+  }
+}

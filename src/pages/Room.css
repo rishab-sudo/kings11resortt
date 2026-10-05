@@ -1,0 +1,327 @@
+/* ==========================================================================
+   Room Page — Dark Green / Beige theme
+   Reference: staggered hero text reveal, room-grid hover cards, testimonial
+   ========================================================================== */
+
+.room-page {
+  --deep: #12201A;       /* darkest green — hero overlay / testimonial bg */
+  --panel: #1D3226;      /* card panel */
+  --panel-2: #24402F;    /* lighter panel accent */
+  --beige: #EDE6D2;      /* primary text on dark */
+  --beige-dim: #B9B49E;  /* secondary text on dark */
+  --ink: #16241C;        /* text on beige surfaces */
+  --hairline: rgba(237, 230, 210, 0.14);
+
+  width: 100%;
+  min-height: 100vh;
+  background: #F6F2E7; /* light beige page background between dark sections */
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ---------------- Hero banner ---------------- */
+
+.room-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.room-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 32, 26, 0.35) 0%,
+    rgba(18, 32, 26, 0.75) 100%
+  );
+}
+
+.room-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.room-hero-eyebrow {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #C9AF7E;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+}
+
+.room-hero-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  line-height: 1.1;
+  color: var(--beige);
+  margin: 0;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+/* ---------------- Intro ---------------- */
+
+.rooms-intro {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 72px 24px 40px;
+  text-align: center;
+}
+
+.rooms-eyebrow {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6E7A5F;
+  margin: 0 0 10px;
+  letter-spacing: 0.04em;
+}
+
+.rooms-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.rooms-lede {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #55604F;
+  margin: 0;
+}
+
+/* ---------------- Rooms grid section — bento_bg, no overlay ---------------- */
+
+.rooms-grid-section {
+  padding: 80px 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* intentionally no gradient/scrim/box-shadow on this section */
+}
+
+.rooms-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.room-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.room-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.room-card:hover .room-card-img {
+  transform: scale(1.06);
+}
+
+/* gradient on the card itself (for text legibility) — distinct from the
+   section-level background, which stays clean per brief */
+.room-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 32, 26, 0) 45%, rgba(18, 32, 26, 0.85) 100%);
+}
+
+.room-card-arrow {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--beige);
+  color: var(--ink);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.room-card:hover .room-card-arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.room-card-info {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  z-index: 1;
+  color: var(--beige);
+}
+
+.room-card-info h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 6px;
+}
+
+.room-card-meta {
+  font-size: 0.82rem;
+  color: var(--beige-dim);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.room-card-meta .dot {
+  margin: 0 4px;
+  opacity: 0.6;
+}
+
+@media (max-width: 760px) {
+  .rooms-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------------- Testimonial section ---------------- */
+
+.testimonial-section {
+  background: var(--deep);
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.testimonial-eyebrow {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #C9AF7E;
+  margin: 0 0 10px;
+}
+
+.testimonial-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  line-height: 1.25;
+  color: var(--beige);
+  margin: 0 0 48px;
+}
+
+.testimonial-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 28px 26px;
+  transition: border-color 0.3s ease;
+}
+
+.testimonial-card.is-active {
+  border-color: rgba(201, 175, 126, 0.5);
+}
+
+.testimonial-stars {
+  color: #C9AF7E;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+}
+
+.testimonial-quote {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--beige-dim);
+  margin: 0 0 24px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--panel-2);
+  color: var(--beige);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--beige);
+}
+
+.testimonial-role {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--beige-dim);
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(237, 230, 210, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.testimonial-dot.is-active {
+  background: #C9AF7E;
+  transform: scale(1.2);
+}
+
+@media (max-width: 860px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+}

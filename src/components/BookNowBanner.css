@@ -1,0 +1,223 @@
+/* =====================================================
+   BOOK NOW BANNER
+===================================================== */
+
+.booknow-banner {
+  position: relative;
+  width: 100%;
+  min-height: 245px;
+  background: #242621;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+/* =====================================================
+   QUOTE MARK
+===================================================== */
+
+.booknow-banner__quote-mark {
+  position: absolute;
+  left: 65px;
+  top: 4px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 125px;
+  line-height: 1;
+  font-weight: 700;
+
+  color: rgba(53, 78, 61, 0.35);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.booknow-banner__container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+max-width: 75%;
+
+  margin: 0 auto;
+  padding: 35px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+
+/* =====================================================
+   QUOTE CONTENT
+===================================================== */
+
+.booknow-banner__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.booknow-banner__quote {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  line-height: 1.85;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+
+  color: #f7f3ed;
+}
+
+.booknow-banner__quote span {
+  color: #c99b6b;
+}
+
+.booknow-banner__quote em {
+  color: #f7f3ed;
+  font-style: italic;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.booknow-banner__action {
+  flex-shrink: 0;
+}
+
+.booknow-banner__button {
+  min-width: 164px;
+  height: 47px;
+
+  padding: 0 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid #c8a47b;
+  background: transparent;
+
+  color: #d7ae80;
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.booknow-banner__arrow {
+  font-size: 16px;
+  line-height: 1;
+  margin-top: -1px;
+  transition: transform 0.3s ease;
+}
+
+.booknow-banner__button:hover {
+  background: #c8a47b;
+  color: #1b2e27;
+  border-color: #c8a47b;
+}
+
+.booknow-banner__button:hover .booknow-banner__arrow {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+  .booknow-banner__container {
+    max-width: 90%;
+  }
+
+  .booknow-banner__quote {
+    font-size: 26px;
+  }
+
+  .booknow-banner__quote-mark {
+    left: 25px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+  .booknow-banner {
+    min-height: auto;
+  }
+
+  .booknow-banner__container {
+    max-width: 100%;
+    padding: 55px 25px 50px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .booknow-banner__quote-mark {
+    left: 15px;
+    top: 5px;
+    font-size: 95px;
+  }
+
+  .booknow-banner__quote {
+    font-size: 23px;
+    line-height: 1.6;
+  }
+
+  .booknow-banner__desktop-break {
+    display: none;
+  }
+
+  .booknow-banner__action {
+    width: 100%;
+  }
+
+  .booknow-banner__button {
+    min-width: 155px;
+    height: 45px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .booknow-banner__container {
+    padding: 50px 20px 45px;
+  }
+
+  .booknow-banner__quote {
+    font-size: 21px;
+  }
+
+  .booknow-banner__quote-mark {
+    font-size: 80px;
+  }
+}

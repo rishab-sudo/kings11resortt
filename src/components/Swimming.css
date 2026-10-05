@@ -1,0 +1,349 @@
+.swimming-section {
+  width: 100%;
+  min-height: 600px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  margin: 0;
+  padding: 45px 0px;
+}
+
+
+/* =========================================
+   LEFT IMAGE - 50%
+========================================= */
+
+.swimming-image {
+  width: 100%;
+  max-height: 600px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+.swimming-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+max-height: 800px;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+
+.swimming-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   RIGHT CONTENT - 50%
+========================================= */
+
+.swimming-content {
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+
+  box-sizing: border-box;
+
+  background: #111914;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CONTENT INNER
+========================================= */
+
+.swimming-content-inner {
+  width: 100%;
+  max-width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.swimming-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #d8b979;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.swimming-content h2 {
+  margin: 0 0 20px;
+
+  color: #f5f0e7;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 4vw, 62px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.swimming-description {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.swimming-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 35px;
+
+  margin-top: 35px;
+  margin-bottom: 32px;
+}
+
+
+/* SINGLE FEATURE */
+
+.swimming-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.swimming-feature-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d8b979;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.swimming-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 13px 22px;
+
+  border: 1px solid #d8b979;
+
+  background: #e7ce96;
+
+  color: #182019;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* BUTTON ARROW */
+
+.swimming-button span {
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.swimming-button:hover {
+  background: transparent;
+
+  color: #e7ce96;
+}
+
+
+.swimming-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .swimming-section {
+    grid-template-columns: 50% 50%;
+  }
+
+  .swimming-image {
+    min-height: 500px;
+  }
+
+  .swimming-image img {
+    min-height: 500px;
+  }
+
+  .swimming-content {
+    min-height: 500px;
+
+    padding: 40px;
+  }
+
+  .swimming-features {
+    gap: 20px;
+  }
+
+  .swimming-feature {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .swimming-section {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  /* IMAGE */
+
+  .swimming-image {
+    width: 100%;
+
+    min-height: 400px;
+  }
+
+
+  .swimming-image img {
+    width: 100%;
+
+    min-height: 400px;
+  }
+
+
+  /* CONTENT */
+
+  .swimming-content {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 70px 25px;
+  }
+
+
+  .swimming-content-inner {
+    max-width: 500px;
+  }
+
+
+  .swimming-content h2 {
+    font-size: 44px;
+  }
+
+
+  .swimming-description {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  /* FEATURES */
+
+  .swimming-features {
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+  }
+
+}
