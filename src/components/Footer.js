@@ -71,7 +71,7 @@ function Footer() {
             <ul className="footer-col-links">
               <li><a href="tel:+18005464611">+1 (800) KING-11</a></li>
               <li><a href="mailto:reservations@king11resort.com">reservations@king11resort.com</a></li>
-              <li><a href="#">Lakeside Hills, Nature Reserve District</a></li>
+              <li><a href="/Cookie">Lakeside Hills, Nature Reserve District</a></li>
             </ul>
           </div>
         </div>
@@ -81,9 +81,9 @@ function Footer() {
             &copy; {new Date().getFullYear()} King 11 Resort. All rights reserved.
           </span>
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Cookie Settings</a>
+            <a href="/Cookie">Privacy Policy</a>
+            <a href="/Cookie">Terms of Use</a>
+            <a href="/Cookie">Cookie Settings</a>
           </div>
         </div>
       </motion.div>
