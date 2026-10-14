@@ -1,0 +1,340 @@
+/* =========================================
+   PAGE BANNER
+========================================= */
+
+.page-banner {
+  width: 100%;
+  height: 80vh;
+
+ position: sticky;
+
+  /*
+    IMPORTANT:
+
+    The banner will initially scroll upward
+    by 80px and then stop/stick there.
+  */
+  top: -45px;
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.page-banner-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.page-banner-content {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px 20px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.page-banner-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  letter-spacing: -1px;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.page-banner-breadcrumb {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* Home Link */
+
+.page-banner-breadcrumb a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.page-banner-breadcrumb a:hover {
+  color: #d7b66a;
+}
+
+
+/* Separator */
+
+.page-banner-separator {
+  color: #d7b66a;
+
+  font-size: 11px;
+}
+
+
+/* Current Page */
+
+.page-banner-current {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   VERTICAL ANIMATED LINE
+========================================= */
+
+.page-banner-line-wrapper {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1px;
+  height: 95px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+.page-banner-line {
+  position: absolute;
+
+  top: -50%;
+
+  left: 0;
+
+  width: 1px;
+  height: 50%;
+
+  background: #ffffff;
+
+  animation: pageBannerLineAnimation 2.5s
+    ease-in-out infinite;
+}
+
+
+@keyframes pageBannerLineAnimation {
+
+  0% {
+    top: -50%;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+
+}
+
+
+/* =========================================
+   NEXT SECTION
+========================================= */
+
+/*
+   IMPORTANT:
+
+   Do NOT use negative margin here.
+
+   The next section will naturally scroll upward
+   and pass over the sticky PageBanner.
+*/
+
+.page-banner + section {
+  position: relative;
+
+  z-index: 5;
+
+  background: #ffffff;
+
+  /*
+    Gives the section a premium rounded top.
+    Remove if you don't want rounded corners.
+  */
+  border-radius: 35px 35px 0 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   OPTIONAL INNER CONTENT
+========================================= */
+
+.page-banner + section > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .page-banner {
+    height: 460px;
+
+    top: -70px;
+  }
+
+  .page-banner-title {
+    font-size: 52px;
+  }
+
+  .page-banner-line-wrapper {
+    height: 80px;
+  }
+
+  .page-banner + section {
+    border-radius: 28px 28px 0 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .page-banner {
+    height: 400px;
+
+    /*
+      On mobile the banner scrolls
+      approximately 55px before sticking.
+    */
+    top: -55px;
+
+    background-position: center;
+  }
+
+
+  .page-banner-overlay {
+    background: rgba(0, 0, 0, 0.48);
+  }
+
+
+  .page-banner-title {
+    font-size: 40px;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .page-banner-breadcrumb {
+    margin-top: 14px;
+
+    font-size: 11px;
+
+    gap: 8px;
+  }
+
+
+  .page-banner-line-wrapper {
+    height: 65px;
+  }
+
+
+  .page-banner + section {
+    border-radius: 22px 22px 0 0;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .page-banner {
+    height: 370px;
+
+    top: -50px;
+  }
+
+
+  .page-banner-title {
+    font-size: 35px;
+  }
+
+
+  .page-banner-breadcrumb {
+    font-size: 10px;
+  }
+}

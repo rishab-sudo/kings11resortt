@@ -1,0 +1,591 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
+  background: #242621;
+  color: #d7d4cf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND VIDEO
+========================================================= */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   BLACK OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0.32) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(850px, 90%);
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  transform: translateY(-5%);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  color: #d7d4cf;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.hero-heading {
+  margin: 0;
+
+  color: #d7d4cf;
+
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 0.98;
+
+  font-weight: 500;
+
+  letter-spacing: -0.045em;
+
+  text-wrap: balance;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width: min(620px, 100%);
+
+  margin: 28px auto 0;
+
+  color: rgba(215, 212, 207, 0.78);
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BOOKING WRAPPER
+========================================================= */
+
+.hero-booking-wrapper {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 22px;
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+.hero-booking-form {
+  width: 100%;
+  max-width: 1280px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  background: rgba(36, 38, 33, 0.88);
+
+  border: 1px solid rgba(215, 212, 207, 0.22);
+
+  border-radius: 15px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.hero-form-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   FIELD LABEL
+========================================================= */
+
+.hero-form-field label {
+  padding-left: 1px;
+
+  color: #d7d4cf;
+
+  font-size: 9px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  opacity: 0.72;
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.hero-form-field input,
+.hero-form-field select {
+  width: 100%;
+  height: 38px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(215, 212, 207, 0.17);
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: rgba(215, 212, 207, 0.08);
+
+  color: #d7d4cf;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.hero-form-field input::placeholder {
+  color: rgba(215, 212, 207, 0.48);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.hero-form-field select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+.hero-form-field select option {
+  background: #242621;
+  color: #d7d4cf;
+}
+
+
+/* =========================================================
+   DATE INPUT
+========================================================= */
+
+.hero-form-field input[type="date"] {
+  color-scheme: dark;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.hero-form-field input:focus,
+.hero-form-field select:focus {
+  border-color: rgba(215, 212, 207, 0.55);
+
+  background: rgba(215, 212, 207, 0.12);
+}
+
+
+/* =========================================================
+   FIELD WIDTHS
+========================================================= */
+
+.hero-name-field {
+  flex: 1.05;
+}
+
+.hero-email-field {
+  flex: 1.05;
+}
+
+.hero-room-field {
+  flex: 1.05;
+}
+
+.hero-date-field {
+  flex: 1;
+}
+
+.hero-small-field {
+  flex: 0 0 68px;
+}
+
+
+/* =========================================================
+   BOOKING BUTTON
+========================================================= */
+
+.hero-booking-button {
+  flex: 0 0 168px;
+
+  height: 38px;
+
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: #d7d4cf;
+  color: #242621;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.hero-booking-button:hover {
+  background: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.hero-booking-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-booking-form {
+    gap: 9px;
+    padding: 15px;
+  }
+
+  .hero-small-field {
+    flex: 0 0 58px;
+  }
+
+  .hero-booking-button {
+    flex: 0 0 145px;
+
+    padding: 0 12px;
+
+    font-size: 9px;
+  }
+
+  .hero-form-field input,
+  .hero-form-field select {
+    padding: 0 9px;
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-section {
+    min-height: 100svh;
+    height: auto;
+
+    padding:
+      100px 20px
+      230px;
+  }
+
+  .hero-content {
+    transform: none;
+  }
+
+  .hero-booking-wrapper {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .hero-booking-form {
+    display: grid;
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    align-items: end;
+  }
+
+  .hero-name-field,
+  .hero-email-field,
+  .hero-room-field,
+  .hero-date-field {
+    flex: initial;
+  }
+
+  .hero-small-field {
+    flex: initial;
+  }
+
+  .hero-booking-button {
+    width: 100%;
+    flex: initial;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    min-height: 100svh;
+
+    padding:
+      90px 18px
+      25px;
+
+    align-items: center;
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+  .hero-heading {
+    font-size: clamp(42px, 12vw, 62px);
+
+    line-height: 1;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+
+    max-width: 420px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+
+  /* Booking */
+
+  .hero-booking-wrapper {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 55px;
+  }
+
+  .hero-booking-form {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+  }
+
+
+  .hero-name-field,
+  .hero-email-field,
+  .hero-room-field,
+  .hero-date-field,
+  .hero-small-field {
+    width: 100%;
+    min-width: 0;
+  }
+
+
+  .hero-booking-button {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    height: 44px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-booking-form {
+    padding: 13px;
+
+    gap: 9px;
+  }
+
+  .hero-form-field {
+    gap: 6px;
+  }
+
+  .hero-form-field label {
+    font-size: 8px;
+  }
+
+  .hero-form-field input,
+  .hero-form-field select {
+    height: 36px;
+
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+
+  .hero-booking-button {
+    height: 40px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+  }
+}

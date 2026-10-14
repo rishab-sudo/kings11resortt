@@ -1,0 +1,941 @@
+/* =========================================================
+   GLOBAL ABOUT PAGE
+========================================================= */
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE BANNER FIX
+========================================================= */
+
+/*
+   Important:
+   If PageBanner.css has sticky/absolute positioning,
+   this keeps the banner in normal document flow on About page.
+*/
+
+.about-page .about-hero {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section-1 {
+  width: 100%;
+  padding: 100px 6%;
+
+  background: #f5f1e7;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-section-1-container {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   LEFT GALLERY
+========================================================= */
+
+.about-section-1-gallery {
+  width: 100%;
+  position: relative;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.about-section-1-main-image {
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 50% 50% 0 0 / 260px 260px 0 0;
+  border: 1.5px solid rgba(197, 168, 128, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09);
+  position: relative;
+  background: #1b2e27;
+}
+
+.about-section-1-main-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 32%;
+  transition: transform 0.6s ease;
+}
+
+.about-section-1-main-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.about-section-1-thumbnails {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 3;
+}
+
+.about-section-1-thumbnail {
+  flex: 1;
+  height: 110px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 2px solid rgba(197, 168, 128, 0.28);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  background: #1b2e27;
+}
+
+.about-section-1-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-section-1-thumbnail:hover img {
+  transform: scale(1.08);
+}
+
+.about-section-1-thumbnail.active,
+.about-section-1-thumbnail:hover {
+  transform: translateY(-4px);
+  border-color: #c5a052;
+  box-shadow: 0 12px 26px rgba(197, 160, 82, 0.25);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.about-section-1-content {
+  width: 100%;
+  padding-left: 15px;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-section-1-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 3.5px;
+  color: #9d7b38;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-section-1-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 1.5px;
+  background: #c5a052;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-section-1-content h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 4.4vw, 62px);
+  line-height: 1.14;
+  font-weight: 500;
+  color: #1a2420;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   LEAD & DESCRIPTION
+========================================================= */
+
+.about-section-1-lead {
+  margin: 22px 0 14px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #383932;
+  font-weight: 400;
+}
+
+.about-section-1-description {
+  margin-top: 14px;
+  max-width: 100%;
+  color: #55544d;
+  font-size: 15.5px;
+  line-height: 1.85;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.about-section-1-features {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.about-section-1-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-section-1-feature-icon {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #c5a66a;
+  background: rgba(197, 166, 106, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9d7b38;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.about-section-1-feature:hover .about-section-1-feature-icon {
+  background: #c5a052;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.about-section-1-feature span {
+  font-family: 'Jost', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #22231e;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.about-section-1-button {
+  margin-top: 36px;
+  border: none;
+  background: #1b2e27;
+  color: #c5a880;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  padding: 15px 36px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 22px rgba(27, 46, 39, 0.15);
+}
+
+.about-section-1-button svg {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.about-section-1-button:hover {
+  background: #c5a052;
+  color: #1a2420;
+  border-color: #c5a052;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(197, 160, 82, 0.25);
+}
+
+.about-section-1-button:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   AMENITIES SECTION
+========================================================= */
+
+.amenities-section {
+  width: 100%;
+
+  padding: 45px 25px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   AMENITIES HEADING
+========================================================= */
+
+.amenities-heading {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.amenities-subtitle {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #8b7355;
+}
+
+.amenities-title {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 4vw, 62px);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #242621;
+}
+
+.amenities-title span {
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+.amenities-description {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #66635d;
+}
+
+
+/* =========================================================
+   AMENITIES GALLERY
+========================================================= */
+
+.amenities-gallery {
+  width: 100%;
+  max-width: 1500px;
+
+  height: 540px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  gap: 8px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   AMENITY ITEM
+========================================================= */
+
+.amenities-item {
+  position: relative;
+
+  flex: 1 1 0;
+
+  min-width: 0;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    flex 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   SHRINK OTHER ITEMS
+========================================================= */
+
+.amenities-gallery:hover .amenities-item {
+  flex: 0.75;
+}
+
+
+/* =========================================================
+   EXPAND HOVERED ITEM
+========================================================= */
+
+.amenities-gallery .amenities-item:hover {
+  flex: 2.8;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.amenities-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s ease;
+}
+
+.amenities-item:hover .amenities-image {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.amenities-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.32) 45%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
+
+  opacity: 0.65;
+
+  transition: opacity 0.5s ease;
+}
+
+.amenities-item:hover .amenities-overlay {
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   AMENITY CONTENT
+========================================================= */
+
+.amenities-content {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+
+  color: #ffffff;
+
+  z-index: 2;
+
+  transform: translateY(10px);
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.amenities-number {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.amenities-content h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.amenities-view {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 15px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.amenities-arrow {
+  display: inline-flex;
+
+  width: 30px;
+  height: 30px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 50%;
+
+  font-size: 16px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER CONTENT
+========================================================= */
+
+.amenities-item:hover .amenities-content {
+  transform: translateY(0);
+}
+
+.amenities-item:hover .amenities-view {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.amenities-item:hover .amenities-arrow {
+  background: #ffffff;
+
+  color: #242621;
+}
+
+
+/* =========================================================
+   DESKTOP COLLAPSED TITLES
+========================================================= */
+
+@media (min-width: 992px) {
+
+  .amenities-item:not(:hover) .amenities-content {
+    left: 50%;
+    right: auto;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    width: max-content;
+  }
+
+  .amenities-item:not(:hover) .amenities-content h3 {
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+    font-size: 20px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .amenities-item:not(:hover) .amenities-number,
+  .amenities-item:not(:hover) .amenities-view {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .about-section-1 {
+    padding: 80px 5%;
+  }
+
+  .about-section-1-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-section-1-gallery {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  .about-section-1-content {
+    padding-left: 0;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  .about-section-1-content h2 {
+    font-size: 48px;
+  }
+
+
+  /* Amenities */
+
+  .amenities-section {
+    padding: 90px 25px;
+  }
+
+  .amenities-gallery {
+    height: 480px;
+  }
+
+  .amenities-content {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
+  }
+
+  .amenities-content h3 {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* About */
+
+  .about-section-1 {
+    padding: 65px 20px;
+  }
+
+  .about-section-1-container {
+    gap: 45px;
+  }
+
+  .about-section-1-main-image {
+    height: 380px;
+    border-radius: 50% 50% 0 0 / 180px 180px 0 0;
+  }
+
+  .about-section-1-thumbnails {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .about-section-1-thumbnail {
+    height: 85px;
+    border-radius: 12px;
+  }
+
+  .about-section-1-content h2 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .about-section-1-lead {
+    font-size: 16px;
+    margin: 16px 0 12px;
+  }
+
+  .about-section-1-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .about-section-1-features {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 26px;
+    padding-top: 20px;
+  }
+
+  .about-section-1-feature {
+    gap: 10px;
+  }
+
+  .about-section-1-feature-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .about-section-1-feature span {
+    font-size: 12px;
+  }
+
+  .about-section-1-button {
+    margin-top: 28px;
+    padding: 13px 28px;
+    font-size: 11px;
+  }
+
+
+  /* Amenities */
+
+  .amenities-section {
+    padding: 75px 18px;
+  }
+
+  .amenities-heading {
+    margin-bottom: 35px;
+  }
+
+  .amenities-title {
+    font-size: 40px;
+  }
+
+  .amenities-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .amenities-gallery {
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    overflow: visible;
+  }
+
+  .amenities-item,
+  .amenities-gallery:hover .amenities-item,
+  .amenities-gallery .amenities-item:hover {
+    flex: none;
+
+    width: 100%;
+
+    height: 280px;
+  }
+
+  .amenities-item:last-child {
+    grid-column: span 2;
+  }
+
+  .amenities-content {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    transform: none !important;
+  }
+
+  .amenities-content h3,
+  .amenities-item:not(:hover) .amenities-content h3 {
+    writing-mode: horizontal-tb;
+
+    transform: none;
+
+    font-size: 22px;
+  }
+
+  .amenities-number {
+    margin-bottom: 7px;
+  }
+
+  .amenities-view {
+    opacity: 1;
+
+    transform: none;
+
+    margin-top: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-section-1 {
+    padding: 55px 15px;
+  }
+
+  .about-section-1-main-image {
+    height: 350px;
+  }
+
+  .about-section-1-content h2 {
+    font-size: 34px;
+  }
+
+  .about-section-1-features {
+    gap: 8px;
+  }
+
+  .about-section-1-feature span {
+    font-size: 7px;
+  }
+
+
+  /* Amenities */
+
+  .amenities-section {
+    padding: 60px 15px;
+  }
+
+  .amenities-title {
+    font-size: 34px;
+  }
+
+  .amenities-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-item,
+  .amenities-gallery:hover .amenities-item,
+  .amenities-gallery .amenities-item:hover {
+    height: 300px;
+  }
+
+  .amenities-item:last-child {
+    grid-column: span 1;
+  }
+
+}

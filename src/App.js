@@ -1,0 +1,35 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+// Pages
+import Home from "./pages/Home";
+import  Navbar  from "./components/Navbar";
+import Room from "./pages/Rooms";
+import Footer from "./components/Footer";
+import Gallery from "./pages/Gallery";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+
+function App() {
+
+  return (
+    <div className="App">
+
+    <Navbar/>
+
+      <Routes>
+
+        < Route path="/" element={<Home />} />
+           < Route path="/about" element={<About />} />
+         < Route path="/rooms" element={<Room />} />
+        < Route path="/gallery" element={<Gallery />} />
+          < Route path="/contact" element={<Contact />} />
+      </Routes>
+<Footer/>
+    </div>
+  );
+}
+
+export default App;

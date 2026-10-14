@@ -1,0 +1,559 @@
+/* =========================================================
+   HOME ROOMS
+========================================================= */
+
+.home-rooms {
+  width: 100%;
+  padding: 100px 0 110px;
+  background-color: #d7d4cf;
+  color: #242621;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.home-rooms-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.home-rooms .container {
+  width: min(100% - 64px, 1400px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.home-rooms-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 58px;
+}
+
+.home-rooms-heading-content {
+  max-width: 650px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.home-rooms-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+
+  color: #242621;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.home-rooms-title {
+  margin: 0 0 22px;
+
+  color: #242621;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   SUBHEADING
+========================================================= */
+
+.home-rooms-subheading {
+  max-width: 570px;
+  margin: 0;
+
+  color: #242621;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SLIDER CONTROLS
+========================================================= */
+
+.home-rooms-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+  padding-bottom: 3px;
+}
+
+.home-rooms-prev,
+.home-rooms-next {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(36, 38, 33, 0.35);
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  color: #242621;
+
+  font-size: 18px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home-rooms-prev:hover,
+.home-rooms-next:hover {
+  background-color: #242621;
+  border-color: #242621;
+  color: #d7d4cf;
+}
+
+.home-rooms-prev:active,
+.home-rooms-next:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
+
+.home-rooms-prev.swiper-button-disabled,
+.home-rooms-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SLIDER WRAPPER
+========================================================= */
+
+.home-rooms-slider-wrapper {
+  width: 100%;
+  overflow: visible;
+}
+
+.home-rooms-swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   SLIDE
+========================================================= */
+
+.home-rooms-swiper .swiper-slide {
+  height: auto;
+
+  display: flex;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROOM CARD
+========================================================= */
+
+.home-room-card {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background-color: #f1efea;
+
+  border-radius: 16px 16px 0 0;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.home-room-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 45px rgba(36, 38, 33, 0.12);
+}
+
+
+/* =========================================================
+   ROOM IMAGE
+========================================================= */
+
+.home-room-image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 350px;
+
+  overflow: hidden;
+
+  background-color: #c8c6c0;
+}
+
+.home-room-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.home-room-card:hover .home-room-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   ROOM CONTENT
+========================================================= */
+
+.home-room-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 26px 32px;
+}
+
+
+/* =========================================================
+   ROOM TITLE
+========================================================= */
+
+.home-room-title {
+  margin: 0 0 10px;
+
+  color: #242621;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   ROOM DETAILS
+========================================================= */
+
+.home-room-details {
+  margin-bottom: 18px;
+
+  color: #7f9187;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ROOM DESCRIPTION
+========================================================= */
+
+.home-room-description {
+  margin: 0;
+
+  color: #7b817b;
+
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ROOM LINK
+========================================================= */
+/* =========================================================
+   EXPLORE ROOM BUTTON
+========================================================= */
+
+.home-room-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 350px;
+
+  margin: 28px auto 0;
+  padding: 13px 24px;
+
+  color: #242621;
+  background: transparent;
+
+  border: 1px solid #242621;
+  border-radius: 0;
+
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 1.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.home-room-link span {
+  font-size: 14px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.home-room-link:hover {
+  gap: 16px;
+
+  background-color: #242621;
+  color: #d7d4cf;
+}
+
+.home-room-link:hover span {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   EXACTLY 3 CARDS
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .home-rooms-swiper {
+    overflow: hidden;
+  }
+
+  .home-rooms-swiper .swiper-slide {
+    width: calc((100% - 60px) / 3);
+  }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+
+  .home-rooms {
+    padding: 85px 0 95px;
+  }
+
+  .home-rooms .container {
+    width: calc(100% - 50px);
+  }
+
+  .home-rooms-header {
+    margin-bottom: 45px;
+  }
+
+  .home-rooms-title {
+    font-size: 54px;
+  }
+
+  .home-room-image-wrap {
+    height: 260px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+  .home-rooms {
+    padding: 80px 0 90px;
+  }
+
+  .home-rooms .container {
+    width: calc(100% - 45px);
+  }
+
+  .home-rooms-header {
+    margin-bottom: 45px;
+  }
+
+  .home-rooms-title {
+    font-size: 52px;
+  }
+
+  .home-room-image-wrap {
+    height: 270px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .home-rooms {
+    padding: 65px 0 75px;
+  }
+
+  .home-rooms .container {
+    width: calc(100% - 36px);
+  }
+
+
+  /* HEADER */
+
+  .home-rooms-header {
+    display: block;
+
+    margin-bottom: 35px;
+  }
+
+
+  /* EYEBROW */
+
+  .home-rooms-eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+
+  /* TITLE */
+
+  .home-rooms-title {
+    margin-bottom: 18px;
+
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .home-rooms-subheading {
+    max-width: 100%;
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+
+  /* CONTROLS */
+
+  .home-rooms-controls {
+    margin-top: 25px;
+  }
+
+  .home-rooms-prev,
+  .home-rooms-next {
+    width: 42px;
+    height: 42px;
+
+    font-size: 16px;
+  }
+
+
+  /* IMAGE */
+
+  .home-room-image-wrap {
+    height: 270px;
+  }
+
+
+  /* CONTENT */
+
+  .home-room-content {
+    padding: 25px 22px 28px;
+  }
+
+  .home-room-title {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .home-rooms .container {
+    width: calc(100% - 28px);
+  }
+
+  .home-rooms-title {
+    font-size: 38px;
+  }
+
+  .home-room-image-wrap {
+    height: 250px;
+  }
+
+}
