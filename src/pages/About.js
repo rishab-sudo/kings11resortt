@@ -66,7 +66,7 @@ const About = () => {
       ========================================= */}
 
       <PageBanner
-        backgroundImage={require("../assets/outdoor_wide/DJI_20260920170134_0593_D.JPG")}
+        backgroundImage={require("../assets/about-banner-bk.png")}
         title="About Us"
         homeLink="/"
         homeText="Home"

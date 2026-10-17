@@ -62,7 +62,7 @@ max-height: 800px;
 
   box-sizing: border-box;
 
-  background: #111914;
+  background: #242621;
 
   color: #ffffff;
 }
@@ -186,7 +186,7 @@ max-height: 800px;
   align-items: center;
   justify-content: center;
 
-  color: #d8b979;
+  color: #d7d4cf;
 
   font-size: 21px;
 }
@@ -205,9 +205,9 @@ max-height: 800px;
 
   padding: 13px 22px;
 
-  border: 1px solid #d8b979;
+  border: 1px solid #d7d4cf;
 
-  background: #e7ce96;
+  background: #d7d4cf;
 
   color: #182019;
 
@@ -236,7 +236,7 @@ max-height: 800px;
 .swimming-button:hover {
   background: transparent;
 
-  color: #e7ce96;
+  color: #d7d4cf;
 }
 
 

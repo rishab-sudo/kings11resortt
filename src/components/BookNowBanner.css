@@ -14,9 +14,9 @@
 }
 
 
-/* =====================================================
+/*=====================================================
    QUOTE MARK
-===================================================== */
+=====================================================*/
 
 .booknow-banner__quote-mark {
   position: absolute;
@@ -28,7 +28,7 @@
   line-height: 1;
   font-weight: 700;
 
-  color: rgba(53, 78, 61, 0.35);
+  color: #d7d4cf;
 
   pointer-events: none;
 }
@@ -74,7 +74,7 @@ max-width: 75%;
   font-weight: 400;
   letter-spacing: 0.2px;
 
-  color: #f7f3ed;
+  color: #d7d4cf;
 }
 
 .booknow-banner__quote span {
@@ -82,7 +82,7 @@ max-width: 75%;
 }
 
 .booknow-banner__quote em {
-  color: #f7f3ed;
+  color: #d7d4cf;
   font-style: italic;
 }
 
@@ -106,10 +106,10 @@ max-width: 75%;
   justify-content: center;
   gap: 8px;
 
-  border: 1px solid #c8a47b;
+  border: 1px solid #d7d4cf;
   background: transparent;
 
-  color: #d7ae80;
+  color: #d7d4cf;
   text-decoration: none;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -131,9 +131,9 @@ max-width: 75%;
 }
 
 .booknow-banner__button:hover {
-  background: #c8a47b;
+  background: #d7d4cf;
   color: #1b2e27;
-  border-color: #c8a47b;
+  border-color: #d7d4cf;
 }
 
 .booknow-banner__button:hover .booknow-banner__arrow {

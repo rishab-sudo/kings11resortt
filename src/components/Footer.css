@@ -1,5 +1,5 @@
 .footer {
-  background: #111c17;
+  background: #242621;
   padding: 70px 60px 40px;
   border-top: 1px solid rgba(197, 168, 128, 0.1);
 }
@@ -21,7 +21,7 @@
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 6px;
-  color: #f5efe6;
+  color: #fbfbfb;
   text-transform: uppercase;
   display: block;
   margin-bottom: 14px;
@@ -32,7 +32,7 @@
   font-size: 13px;
   font-weight: 300;
   line-height: 1.8;
-  color: rgba(245, 239, 230, 0.4);
+  color: #fbfbfb;
   max-width: 270px;
   display: block;
   margin-bottom: 28px;
@@ -46,18 +46,18 @@
 .footer-social-link {
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(197, 168, 128, 0.25);
+  border: 1px solid #d7d4cf;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(197, 168, 128, 0.55);
+color: #d7d4cf;
   text-decoration: none;
   transition: border-color 0.3s, color 0.3s;
 }
 
 .footer-social-link:hover {
-  border-color: #c5a880;
-  color: #c5a880;
+  border-color: #d7d4cf;
+  color: #d7d4cf;
 }
 
 .footer-social-link svg {
@@ -67,11 +67,11 @@
 
 .footer-col-title {
   font-family: 'Jost', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #c5a880;
+  color: #d7d4cf;
   display: block;
   margin-bottom: 20px;
 }
@@ -87,9 +87,9 @@
 
 .footer-col-links li a {
   font-family: 'Jost', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
-  color: rgba(245, 239, 230, 0.45);
+  color: #d7d4cf;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -112,7 +112,7 @@
   font-family: 'Jost', sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: rgba(245, 239, 230, 0.3);
+  color: #d7d4cf;
 }
 
 .footer-legal {
@@ -124,13 +124,13 @@
   font-family: 'Jost', sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: rgba(245, 239, 230, 0.3);
+  color: #d7d4cf;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-legal a:hover {
-  color: rgba(245, 239, 230, 0.65);
+  color: #d7d4cf;
 }
 
 @media (max-width: 1024px) {
