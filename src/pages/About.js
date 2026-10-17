@@ -20,7 +20,7 @@ const About = () => {
   const aboutImages = [
     require("../assets/Reception/DSC05843.JPG"),
     require("../assets/outdoor_wide/DSC05925.JPG"),
-    require("../assets/outdoor_wide/DJI_20260920170213_0594_D.JPG"),
+    require("../assets/Reception/DSC05932.JPG"),
     require("../assets/Dining/DSC05857.JPG"),
   ];
 
