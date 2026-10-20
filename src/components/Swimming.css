@@ -189,8 +189,9 @@ max-height: 800px;
   background: #d7d4cf;
 
   color: #182019;
+  width: fit-content;
 
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 700;
 
   letter-spacing: 1.2px;

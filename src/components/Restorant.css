@@ -9,8 +9,8 @@
   display: grid;
   grid-template-columns: 50% 50%;
 
-  margin: 0;
-  padding: 45px 0px;
+  margin: 60px 0 0;
+  padding: 0;
 }
 
 
@@ -55,7 +55,7 @@ text-align: left !important;
 .restaurant-eyebrow {
   display: block;
 margin-bottom: 18px;
-color: #d7d4cf;
+color: #d8b979;
 
 }
 
@@ -183,8 +183,8 @@ width: fit-content;
 
 .restaurant-image {
   width: 100%;
-    min-height: 500px;
-  max-height: 600px;
+  height: 100%;
+  min-height: 600px;
 
   margin: 0;
   padding: 0;
@@ -207,6 +207,7 @@ width: fit-content;
   padding: 0;
 
   object-fit: cover;
+  object-position: center;
 
   transition: transform 0.7s ease;
 }

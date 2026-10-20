@@ -6,7 +6,6 @@ import {
   FaBed,
   FaLeaf,
   FaConciergeBell,
-  FaArrowRight,
 } from "react-icons/fa";
 
 import "./About.css";
@@ -194,14 +193,6 @@ const About = () => {
 
             </div>
 
-            {/* BUTTON */}
-            <button
-              type="button"
-              className="about-section-1-button"
-            >
-              <span>EXPLORE MORE</span>
-              <FaArrowRight />
-            </button>
 
           </div>
 

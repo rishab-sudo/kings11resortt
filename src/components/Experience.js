@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -268,13 +269,13 @@ const Experience = () => {
 
           {/* CTA */}
 
-          <a
-            href="#experiences"
+          <Link
+            to="/contact"
             className="experience-cta"
           >
             INQUIRE EXPERIENCES
             <span>→</span>
-          </a>
+          </Link>
 
         </div>
 

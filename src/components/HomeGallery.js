@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 // Outdoor / Property Images
 import outdoorImg2 from '../assets/outdoor_wide/DSC05886.JPG'
@@ -269,16 +270,26 @@ function HomeGallery() {
                     <p className="bento-detail">{item.detail}</p>
                   </div>
 
-                  <div className="bento-action-pill">
-                    <span>Explore</span>
-                    <span className="bento-action-arrow">↗</span>
-                  </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
       </div>
+
+      {/* VIEW FULL GALLERY BUTTON */}
+      <motion.div
+        className="gallery-view-all-wrap"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <Link to="/gallery" className="gallery-view-all-btn">
+          <span>Explore Full Gallery</span>
+          <span className="gallery-view-all-arrow">→</span>
+        </Link>
+      </motion.div>
 
       {/* TESTIMONIAL BANNER */}
       <motion.div

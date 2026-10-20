@@ -211,7 +211,7 @@ const Gallery = () => {
       ? galleryData
       : galleryData.filter((item) => item.category === activeCategory);
 
-  // Keyboard navigation for lightbox
+  // Escape key closes lightbox
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedImage) return;
@@ -220,6 +220,18 @@ const Gallery = () => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedImage]);
+
+  // Lock background scroll while lightbox is open
+  useEffect(() => {
+    if (!selectedImage) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selectedImage]);
+
+  const openImage = (image) => setSelectedImage(image);
 
   return (
     <>
@@ -254,6 +266,8 @@ const Gallery = () => {
               <button
                 key={category}
                 type="button"
+                role="tab"
+                aria-selected={activeCategory === category}
                 className={`gallery-filter-button ${
                   activeCategory === category ? "gallery-filter-button-active" : ""
                 }`}
@@ -291,30 +305,25 @@ const Gallery = () => {
                   const imageClass =
                     index % 3 === 2 ? "gallery-image-full" : "gallery-image-small";
 
+                  const imageData = {
+                    src: imageSrc,
+                    alt: imageAlt,
+                    title: imageTitle,
+                    category: categoryData.category,
+                  };
+
                   return (
                     <div
                       className={`gallery-image-item ${imageClass}`}
                       key={`${categoryData.category}-${index}`}
-                      onClick={() =>
-                        setSelectedImage({
-                          src: imageSrc,
-                          alt: imageAlt,
-                          title: imageTitle,
-                          category: categoryData.category,
-                        })
-                      }
+                      onClick={() => openImage(imageData)}
                       role="button"
                       tabIndex={0}
                       aria-label={`Open preview for ${imageTitle}`}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
                           e.preventDefault();
-                          setSelectedImage({
-                            src: imageSrc,
-                            alt: imageAlt,
-                            title: imageTitle,
-                            category: categoryData.category,
-                          });
+                          openImage(imageData);
                         }
                       }}
                     >

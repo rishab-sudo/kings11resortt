@@ -13,18 +13,18 @@
 .gallery-header .section-eyebrow {
   display: block;
 
-color: #7d6b54;
+color: #242621;
   margin-bottom: 10px;
 }
 
 .gallery-header .section-title {
   margin: 0;
   font-weight: 500;
-  color: #7d6b54;
+  color: #000000;
 }
 
 .gallery-header .section-description {
-  color: #5c6b60;
+  color: #454940;
   margin-top: 14px;
 
 }
@@ -306,6 +306,55 @@ color: #7d6b54;
 
 .bento-card:hover .bento-action-arrow {
   transform: translate(2px, -2px);
+}
+
+/* =========================================
+   VIEW ALL GALLERY BUTTON
+========================================= */
+
+.gallery-view-all-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+  margin-bottom: 10px;
+}
+
+.gallery-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 42px;
+  background: #1b2e27;
+  color: #c5a880;
+  border: 1px solid rgba(197, 168, 128, 0.35);
+  border-radius: 50px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 6px 24px rgba(27, 46, 39, 0.12);
+}
+
+.gallery-view-all-btn:hover {
+  background: #c5a880;
+  color: #1b2e27;
+  border-color: #c5a880;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(197, 168, 128, 0.3);
+  text-decoration: none;
+}
+
+.gallery-view-all-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.gallery-view-all-btn:hover .gallery-view-all-arrow {
+  transform: translateX(5px);
 }
 
 /* =========================================
