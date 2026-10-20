@@ -223,15 +223,15 @@ const Experience = () => {
 
           <div className="experience-intro">
 
-            <span className="experience-eyebrow">
+            <span className="experience-eyebrow eyebrow-text">
               — THE KING 11 EXPERIENCE —
             </span>
 
-            <h2 className="experience-heading">
+            <h2 className="experience-heading section-heading">
               Beyond Your Stay
             </h2>
 
-            <p className="experience-description">
+            <p className="experience-description section-para">
               From rejuvenating wellness rituals to twilight culinary
               journeys, every service point is purposefully crafted to
               awaken your senses.

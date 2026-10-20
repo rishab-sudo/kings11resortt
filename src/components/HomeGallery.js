@@ -176,9 +176,9 @@ function HomeGallery() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       >
-        <span className="section-eyebrow">— Curated Bento Showcase —</span>
-        <h2 className="section-title">Life at King 11</h2>
-        <p className="section-description">
+        <span className="section-eyebrow eyebrow-text">— Curated Bento Showcase —</span>
+        <h2 className="section-title section-heading">Life at King 11</h2>
+        <p className="section-description section-subHeading">
           Immerse yourself in moments of natural serenity, refined architecture,
           and curated atmospheres captured across the King 11 estate.
         </p>

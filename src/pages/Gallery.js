@@ -236,13 +236,13 @@ const Gallery = () => {
         <div className="gallery-wrapper">
           <div className="gallery-header">
             <span className="gallery-eyebrow">
-              <span className="gallery-eyebrow-line"></span>
+              <span className="gallery-eyebrow-line eyebrow-text"></span>
               OUR GALLERY
             </span>
 
-            <h2 className="gallery-heading">Moments at King 11</h2>
+            <h2 className="gallery-heading section-heading">Moments at King 11</h2>
 
-            <p className="gallery-description">
+            <p className="gallery-description section-subHeading">
               Explore the spaces, experiences and memories that make every stay
               at King 11 Resort truly unforgettable.
             </p>

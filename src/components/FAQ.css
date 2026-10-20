@@ -42,10 +42,7 @@
 
   color: #26382d;
 
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+
 }
 
 
@@ -68,13 +65,6 @@
 
   color: #173329;
 
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(42px, 5vw, 64px);
-  font-weight: 400;
-
-  line-height: 0.98;
-  letter-spacing: -2px;
 }
 
 
@@ -87,10 +77,7 @@
 
   color: #596357;
 
-  font-size: 16px;
-  font-weight: 400;
 
-  line-height: 1.8;
 }
 
 

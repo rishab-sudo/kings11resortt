@@ -143,11 +143,11 @@ const Rooms = () => {
       <section className="rooms-section">
         <div className="rooms-container">
           <div className="rooms-heading">
-            <span className="rooms-eyebrow">STAY WITH COMFORT</span>
+            <span className="rooms-eyebrow eyebrow-text">STAY WITH COMFORT</span>
 
-            <h2>Find Your Perfect Stay</h2>
+            <h2 className="section-heading">Find Your Perfect Stay</h2>
 
-            <p>
+            <p className="section-para">
               Discover thoughtfully designed rooms and suites
               created to make your stay relaxing, comfortable,
               and memorable.

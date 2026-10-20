@@ -57,28 +57,28 @@ const HomeAbout = () => {
         <div className="h-about-content">
 
           {/* Eyebrow */}
-          <div className="h-about-eyebrow">
+          <div className="h-about-eyebrow eyebrow-text">
             <span className="h-about-eyebrow-line"></span>
             <span>OUR STORY</span>
             <span className="h-about-eyebrow-line"></span>
           </div>
 
           {/* Heading */}
-          <h2 className="h-about-heading">
+          <h2 className="h-about-heading section-heading">
             Where Luxury Meets
             <br />
             Nature
           </h2>
 
           {/* Intro */}
-          <p className="h-about-intro">
+          <p className="h-about-intro section-para">
             Built on the belief that true luxury is found in stillness,
             King 11 Resort offers a rare harmony between refined comfort
             and the wild beauty of nature.
           </p>
 
           {/* Description */}
-          <p className="h-about-description">
+          <p className="h-about-description section-para">
             Since our founding, we have dedicated every stone and suite
             to crafting experiences that go beyond the ordinary. Surrounded
             by pristine landscapes, ancient trees and open skies, King 11

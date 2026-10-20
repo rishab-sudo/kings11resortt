@@ -55,17 +55,17 @@ const FAQ = () => {
         <div className="faq-header">
 
           <span className="faq-eyebrow">
-            <span className="faq-eyebrow-line"></span>
+            <span className="faq-eyebrow-line eyebrow-text"></span>
             GOOD TO KNOW
           </span>
 
-          <h2 className="faq-heading">
+          <h2 className="faq-heading section-heading">
             Frequently Asked
             <br />
             Questions
           </h2>
 
-          <p className="faq-subheading">
+          <p className="faq-subheading section-subHeading" >
             Contact us if you have any questions about your stay,
             rooms, dining, events or celebrations at King 11 Resort.
           </p>

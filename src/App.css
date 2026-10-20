@@ -2,3 +2,17 @@
   width: 80% !important;
 
 }
+.eyebrow-text{
+  font-size: 25px;
+}
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+ font-weight: 600;
+ font-size: 45px !important;
+  font-style: normal;
+  color: #fbfbfb;
+  margin-bottom: 1.25rem;
+}
+.section-para{
+  font-size: 25px;
+}

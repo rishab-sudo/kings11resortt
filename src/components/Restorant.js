@@ -9,17 +9,17 @@ const Restorant = () => {
       <div className="restaurant-content">
         <div className="restaurant-content-inner">
 
-          <span className="restaurant-eyebrow">
+          <span className="restaurant-eyebrow eyebrow-text" >
             — RESTAURANT —
           </span>
 
-          <h2>
+          <h2 className="section-heading">
             Dine, Relax
             <br />
             & Savour
           </h2>
 
-          <p className="restaurant-description">
+          <p className="restaurant-description section-para">
             Experience a delightful dining journey with carefully crafted
             cuisine, elegant surroundings, and warm hospitality. Every dish
             is prepared with passion to make your stay truly memorable.

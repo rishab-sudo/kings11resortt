@@ -124,11 +124,11 @@ const About = () => {
           {/* RIGHT CONTENT AREA */}
           <div className="about-section-1-content">
 
-            <span className="about-section-1-eyebrow">
+            <span className="about-section-1-eyebrow eyebrow-text">
               OUR STORY
             </span>
 
-            <h2>
+            <h2 className="section-heading">
               A Stay Shaped
               <br />
               Around the King's
@@ -136,11 +136,11 @@ const About = () => {
               Experience
             </h2>
 
-            <p className="about-section-1-lead">
+            <p className="about-section-1-lead section-para">
               Where timeless luxury, pristine nature, and warm royal hospitality meet to craft unforgettable memories.
             </p>
 
-            <p className="about-section-1-description">
+            <p className="about-section-1-description section-para">
               Built on the belief that true luxury is found in stillness and serenity, King 11 Resort offers a rare harmony between refined comfort and the tranquil beauty of nature. Whether you are here for leisure, family vacations, corporate retreats, or joyous celebrations, every moment is thoughtfully curated to make your stay warm, comfortable, and truly exceptional.
             </p>
 
@@ -219,15 +219,15 @@ const About = () => {
         {/* Heading */}
         <div className="amenities-heading">
 
-          <span className="amenities-subtitle">
+          <span className="amenities-subtitle eyebrow-text" >
             DISCOVER MORE
           </span>
 
-          <h2 className="amenities-title">
+          <h2 className="amenities-title section-heading">
             Luxury <span>Amenities</span>
           </h2>
 
-          <p className="amenities-description">
+          <p className="amenities-description section-subHeading">
             Experience thoughtfully designed spaces, exceptional
             comfort and premium amenities created to make every
             moment memorable.

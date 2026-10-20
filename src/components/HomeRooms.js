@@ -60,15 +60,15 @@ const HomeRooms = () => {
 
           <div className="home-rooms-heading-content">
 
-            <span className="home-rooms-eyebrow">
+            <span className="home-rooms-eyebrow eyebrow-text">
               — Luxury Suites & Villas —
             </span>
 
-            <h2 className="home-rooms-title">
+            <h2 className="home-rooms-title section-heading">
               Featured Rooms
             </h2>
 
-            <p className="home-rooms-subheading">
+            <p className="home-rooms-subheading section-subHeading">
               Discover our newly appointed suites and private villas,
               designed with natural materials and panoramic viewpoints
               for an unforgettable retreat.

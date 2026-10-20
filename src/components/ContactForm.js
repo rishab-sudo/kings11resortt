@@ -206,17 +206,17 @@ const ContactForm = () => {
         ===================================== */}
         <div className="contact-form-content">
 
-          <div className="contact-form-eyebrow">
-            <span className="contact-form-eyebrow-line"></span>
+          <div className="contact-form-eyebrow"> 
+            <span className="contact-form-eyebrow-line eyebrow-text"></span>
             GET IN TOUCH
             <span className="contact-form-eyebrow-line"></span>
           </div>
 
-          <h2 className="contact-form-heading">
+          <h2 className="contact-form-heading section-heading">
             Plan Your Stay
           </h2>
 
-          <p className="contact-form-description">
+          <p className="contact-form-description section-subHeading">
             Ready to escape? Reach out to our team and
             we'll curate a bespoke experience tailored to
             your perfect retreat.
